@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="Vídeos de apoio para Isabela construir uma Mini Plotter e transformar seus desenhos em traços no papel, aprendendo um passo de cada vez.">
+  <title>Vídeos da Mini Plotter</title>
+  <style>
+    :root {
+      --bg: #faf8f5;
+      --surface: #ffffff;
+      --text: #1d1a16;
+      --muted: #6d665c;
+      --border: #e7e2da;
+      --accent: #b4552d;
+      --accent-soft: #fdf1ea;
+      --badge-text: #ffffff;
+      --shadow: 0 1px 2px rgba(29, 26, 22, .05), 0 8px 24px rgba(29, 26, 22, .06);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #15140f;
+        --surface: #1e1c17;
+        --text: #efeae2;
+        --muted: #a49c90;
+        --border: #332f28;
+        --accent: #e08a5f;
+        --accent-soft: #2b211a;
+        --badge-text: #15140f;
+        --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 8px 24px rgba(0, 0, 0, .25);
+      }
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      padding: 56px 20px 80px;
+      background: var(--bg);
+      color: var(--text);
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    main { max-width: 780px; margin: 0 auto; }
+
+    a {
+      color: var(--accent);
+      text-underline-offset: .2em;
+      overflow-wrap: anywhere;
+    }
+
+    a:focus-visible,
+    video:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 4px;
+    }
+
+    /* Cabeçalho */
+
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      font-size: .875rem;
+      font-weight: 600;
+      color: var(--accent);
+      margin: 0 0 10px;
+    }
+
+    h1 {
+      font-size: clamp(1.9rem, 5vw, 2.7rem);
+      line-height: 1.15;
+      letter-spacing: -.025em;
+      margin: 0 0 12px;
+    }
+
+    .lead {
+      font-size: 1.075rem;
+      color: var(--muted);
+      margin: 0;
+      max-width: 60ch;
+    }
+
+    /* Orientações de estudo */
+
+    .instrucoes {
+      background: var(--accent-soft);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--accent);
+      border-radius: 12px;
+      padding: 24px 26px;
+      margin: 32px 0 40px;
+    }
+
+    .instrucoes h2 {
+      font-size: 1.05rem;
+      margin: 0 0 12px;
+      letter-spacing: -.01em;
+    }
+
+    .instrucoes ol { margin: 0; padding-left: 1.2em; }
+    .instrucoes li { margin-bottom: 12px; }
+    .instrucoes li:last-child { margin-bottom: 0; }
+
+    /* Vídeos */
+
+    section { margin-bottom: 48px; scroll-margin-top: 24px; }
+
+    .titulo {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 6px;
+    }
+
+    .numero {
+      flex: none;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: var(--badge-text);
+      font-size: .875rem;
+      font-weight: 600;
+      display: grid;
+      place-items: center;
+      transform: translateY(3px);
+    }
+
+    h2 { font-size: 1.3rem; letter-spacing: -.015em; margin: 0; }
+
+    .caption {
+      color: var(--muted);
+      margin: 0 0 18px;
+      padding-left: 42px;
+    }
+
+    video {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: #000;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      box-shadow: var(--shadow);
+    }
+
+    .arquivo { margin: 10px 0 0; font-size: .875rem; }
+
+    .quando {
+      margin: 16px 0 0;
+      padding: 14px 18px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      font-size: 1rem;
+      color: var(--muted);
+    }
+
+    .quando strong { color: var(--text); }
+
+    .cuidado { margin: 14px 0 0; font-size: 1rem; color: var(--muted); }
+    .cuidado strong { color: var(--text); }
+
+    /* Apoio e rodapé */
+
+    .ajuda {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 26px 28px;
+      box-shadow: var(--shadow);
+    }
+
+    .ajuda h2 { font-size: 1.1rem; margin: 0 0 10px; }
+    .ajuda p { margin: 0 0 12px; }
+    .ajuda p:last-child { margin-bottom: 0; }
+
+    footer {
+      margin-top: 40px;
+      padding-top: 22px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: .875rem;
+    }
+
+    @media (max-width: 480px) {
+      body { padding: 32px 16px 48px; }
+      .instrucoes, .ajuda { padding: 20px; }
+      .caption { padding-left: 0; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <p class="eyebrow">Projeto Mini Plotter</p>
+      <h1>Construindo nossa Mini Plotter</h1>
+      <p class="lead">
+        Isabela, vamos construir uma máquina que desenha no papel!
+        Estes vídeos ajudam a explorar as peças e o caminho entre um desenho
+        seu e os movimentos da caneta.
+      </p>
+    </header>
+
+    <div class="instrucoes">
+      <h2>Explore no seu ritmo</h2>
+      <ol>
+        <li>
+          <strong>Comece pelo que você quer entender.</strong>
+          Você pode assistir ao vídeo inteiro para conhecer o projeto ou escolher
+          um trecho com sua tutora. Pode pausar, anotar e voltar quando quiser.
+        </li>
+        <li>
+          <strong>Ligue a explicação a uma pequena experiência.</strong>
+          Identificar uma peça ou desenhar no papel o caminho da caneta já é um
+          começo. Sua tutora ajuda a escolher um próximo passo que você possa fazer.
+        </li>
+        <li>
+          <strong>Pergunte quando precisar — ou quando bater a curiosidade.</strong>
+          Você não precisa entender tudo sozinha antes de pedir ajuda.
+          Se quiser saber mais sobre alguma ideia do vídeo, leve a pergunta
+          para sua tutora no Claude.
+        </li>
+      </ol>
+    </div>
+
+    <section id="hardware" aria-labelledby="titulo-hardware">
+      <div class="titulo">
+        <span class="numero" aria-hidden="true">1</span>
+        <h2 id="titulo-hardware">Conhecendo as peças e a montagem</h2>
+      </div>
+      <p class="caption">
+        Hardware é a parte física do projeto: as peças que você pode tocar.
+        Na nossa versão, dois motores de passo movimentam os eixos X e Y,
+        e um servo levanta e baixa a caneta.
+      </p>
+      <video controls preload="metadata" playsinline aria-labelledby="titulo-hardware">
+        <source src="hardware.mp4" type="video/mp4">
+        Seu navegador não oferece reprodução de vídeo nesta página.
+        Use o link abaixo para abrir o arquivo.
+      </video>
+      <p class="arquivo">
+        <a href="hardware.mp4">Abrir o arquivo do vídeo sobre as peças</a>
+      </p>
+      <p class="quando">
+        <strong>Quando assistir:</strong> para conhecer as peças, acompanhar uma
+        explicação da tutora ou relembrar como as partes trabalham juntas.
+        Não é preciso decorar os nomes para começar.
+      </p>
+      <p class="cuidado">
+        <strong>Na hora de ligar os fios:</strong> as ilustrações do vídeo ajudam
+        a entender a ideia, mas as conexões precisam seguir um esquema conferido
+        para as peças que vocês têm. Confira com sua tutora e com seu pai antes
+        de ligar a alimentação.
+      </p>
+    </section>
+
+    <section id="software" aria-labelledby="titulo-software">
+      <div class="titulo">
+        <span class="numero" aria-hidden="true">2</span>
+        <h2 id="titulo-software">Do desenho ao movimento</h2>
+      </div>
+      <p class="caption">
+        Software é o conjunto de programas que usamos no projeto.
+        Vamos explorar como preparar um desenho e transformar seu caminho
+        em instruções para a máquina.
+      </p>
+      <video controls preload="metadata" playsinline aria-labelledby="titulo-software">
+        <source src="software.mp4" type="video/mp4">
+        Seu navegador não oferece reprodução de vídeo nesta página.
+        Use o link abaixo para abrir o arquivo.
+      </video>
+      <p class="arquivo">
+        <a href="software.mp4">Abrir o arquivo do vídeo sobre os programas</a>
+      </p>
+      <p class="quando">
+        <strong>Quando assistir:</strong> quando quiser entender como o desenho
+        vira movimento ou quando sua tutora apresentar os programas.
+        Você pode explorar essa parte antes, durante ou depois da montagem,
+        conforme o próximo passo do projeto.
+      </p>
+      <p class="cuidado">
+        Sua tutora vai explicar o que pedir ao <strong>Claude Code</strong> e como
+        usar os arquivos que ele preparar. Se a máquina fizer algo inesperado,
+        conte o que aconteceu: vocês podem investigar uma parte de cada vez.
+      </p>
+    </section>
+
+    <div class="ajuda">
+      <h2>Precisa de uma ajuda?</h2>
+      <p>
+        Se conseguir, conte o que você esperava que acontecesse e o que observou.
+        Por exemplo: “Eu esperava que a caneta levantasse, mas ela continuou
+        encostada no papel.” Isso ajuda sua tutora a entender por onde começar.
+      </p>
+      <p>
+        Ainda não sabe explicar a dúvida? Pode dizer isso também.
+        Sua tutora ajuda a encontrar as palavras, entender o que falta
+        e escolher uma pequena ação para continuar.
+      </p>
+      <p>
+        Você pode repetir uma experiência, explorar mais um assunto ou fazer
+        uma pausa. Aprender a construir também inclui descobrir o que ajustar
+        na próxima tentativa.
+      </p>
+    </div>
+
+    <footer>
+      Vídeos gerados no NotebookLM como apoio às explicações da tutora ·
+      Projeto Mini Plotter
+    </footer>
+  </main>
+</body>
+</html>
