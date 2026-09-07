@@ -201,8 +201,8 @@
       <h1>Construindo nossa Mini Plotter</h1>
       <p class="lead">
         Isabela, vamos construir uma máquina que desenha no papel!
-        Estes vídeos ajudam a explorar as peças e o caminho entre um desenho
-        seu e os movimentos da caneta.
+        Estes três vídeos acompanham o caminho do projeto: imprimir as peças,
+        conhecer os componentes e transformar um desenho seu nos movimentos da caneta.
       </p>
     </header>
 
@@ -228,27 +228,61 @@
       </ol>
     </div>
 
-    <section id="hardware" aria-labelledby="titulo-hardware">
+    <section id="impressao" aria-labelledby="titulo-impressao">
       <div class="titulo">
         <span class="numero" aria-hidden="true">1</span>
-        <h2 id="titulo-hardware">Conhecendo as peças e a montagem</h2>
+        <h2 id="titulo-impressao">Projeto Mini Plotter: imprimindo as peças em 3D</h2>
       </div>
       <p class="caption">
-        Hardware é a parte física do projeto: as peças que você pode tocar.
-        Na nossa versão, dois motores de passo movimentam os eixos X e Y,
-        e um servo levanta e baixa a caneta.
+        Antes de montar, precisamos fabricar as peças. O vídeo mostra como um
+        arquivo digital vira plástico construído em camadas: o fatiamento do
+        modelo 3D, por que a escala original precisa ser mantida para os
+        encaixes funcionarem, as vantagens do PLA e as regras de segurança
+        com a impressora.
       </p>
-      <video controls preload="metadata" playsinline aria-labelledby="titulo-hardware">
-        <source src="hardware.mp4" type="video/mp4">
+      <video controls preload="metadata" playsinline aria-labelledby="titulo-impressao">
+        <source src="Projeto_Mini_Plotter.mp4" type="video/mp4">
         Seu navegador não oferece reprodução de vídeo nesta página.
         Use o link abaixo para abrir o arquivo.
       </video>
       <p class="arquivo">
-        <a href="hardware.mp4">Abrir o arquivo do vídeo sobre as peças</a>
+        <a href="Projeto_Mini_Plotter.mp4">Abrir o arquivo do vídeo sobre a impressão 3D</a>
       </p>
       <p class="quando">
-        <strong>Quando assistir:</strong> para conhecer as peças, acompanhar uma
-        explicação da tutora ou relembrar como as partes trabalham juntas.
+        <strong>Quando assistir:</strong> antes de imprimir as primeiras peças
+        ou quando quiser entender por que uma peça não encaixou como esperado.
+        É o ponto de partida do projeto.
+      </p>
+      <p class="cuidado">
+        <strong>Na hora de imprimir:</strong> a impressora tem superfícies muito
+        quentes. Quem liga a máquina é seu pai, e o trabalho é sempre em equipe.
+        Combine com ele e com sua tutora antes de começar uma impressão.
+      </p>
+    </section>
+
+    <section id="anatomia" aria-labelledby="titulo-anatomia">
+      <div class="titulo">
+        <span class="numero" aria-hidden="true">2</span>
+        <h2 id="titulo-anatomia">Anatomia da Mini Plotter: as peças e o que cada uma faz</h2>
+      </div>
+      <p class="caption">
+        Hardware é a parte física do projeto: as peças que você pode tocar.
+        O vídeo compara a máquina a um corpo: o Arduino Uno é o cérebro,
+        os motores de passo são os músculos que movem os eixos X e Y,
+        o micro servo SG90 levanta e baixa a caneta, o driver traduz os
+        sinais do Arduino para os motores, e a fonte de 5V é a energia.
+      </p>
+      <video controls preload="metadata" playsinline aria-labelledby="titulo-anatomia">
+        <source src="Anatomia_da_Mini_Plotter.mp4" type="video/mp4">
+        Seu navegador não oferece reprodução de vídeo nesta página.
+        Use o link abaixo para abrir o arquivo.
+      </video>
+      <p class="arquivo">
+        <a href="Anatomia_da_Mini_Plotter.mp4">Abrir o arquivo do vídeo sobre os componentes</a>
+      </p>
+      <p class="quando">
+        <strong>Quando assistir:</strong> para conhecer os componentes, acompanhar
+        uma explicação da tutora ou relembrar como as partes trabalham juntas.
         Não é preciso decorar os nomes para começar.
       </p>
       <p class="cuidado">
@@ -261,21 +295,23 @@
 
     <section id="software" aria-labelledby="titulo-software">
       <div class="titulo">
-        <span class="numero" aria-hidden="true">2</span>
-        <h2 id="titulo-software">Do desenho ao movimento</h2>
+        <span class="numero" aria-hidden="true">3</span>
+        <h2 id="titulo-software">Linha de Produção da Arte: do desenho ao movimento</h2>
       </div>
       <p class="caption">
-        Software é o conjunto de programas que usamos no projeto.
-        Vamos explorar como preparar um desenho e transformar seu caminho
-        em instruções para a máquina.
+        Software é o conjunto de programas que usamos no projeto. O vídeo mostra
+        como uma ideia vira movimento da máquina: a diferença entre imagem em
+        pixels e em vetores, o G-Code com as coordenadas de cada traço, o UGS
+        que entrega os comandos ao Arduino pelo cabo USB, o firmware GRBL que
+        calcula os movimentos dos motores, e o Claude Code como assistente.
       </p>
       <video controls preload="metadata" playsinline aria-labelledby="titulo-software">
-        <source src="software.mp4" type="video/mp4">
+        <source src="Linha_de_Produção_da_Arte.mp4" type="video/mp4">
         Seu navegador não oferece reprodução de vídeo nesta página.
         Use o link abaixo para abrir o arquivo.
       </video>
       <p class="arquivo">
-        <a href="software.mp4">Abrir o arquivo do vídeo sobre os programas</a>
+        <a href="Linha_de_Produção_da_Arte.mp4">Abrir o arquivo do vídeo sobre os programas</a>
       </p>
       <p class="quando">
         <strong>Quando assistir:</strong> quando quiser entender como o desenho
